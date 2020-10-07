@@ -3,8 +3,12 @@
 #include<windows.h>
 using namespace std;
 int jump_ans(int N){
-	if(N==1||N==0) return 1;
-	else return jump_ans(N-1)+jump_ans(N-2);
+	vector<int> dp;
+	for(int i=0;i<=N;i++){
+		if(i==1||i==0) dp.push_back(1);
+		else dp.push_back(dp[i-1]+dp[i-2]);  
+	}
+	return dp[dp.size()-1];
 }
 int main(void){
 	int N,ans;
