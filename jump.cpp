@@ -16,6 +16,7 @@ int main(void){
 	cin >> N;
 	ans=jump_ans(N);
 	cout << "the methods to reach order "<< N<< " are as follow:"<< ans  <<endl; 
+	cout << "bye" <<endl;
     system("pause");
 	return 0;
 }
